@@ -19,11 +19,11 @@
 <div class="serving-section">
     <div class="serving-input">
         <label class="label">Usual Serving</label>
-        <input class="input-serving" type="number" placeholder="0">
+        <input id="usual-serving" class="input-serving" type="number" placeholder="0">
     </div>
     <div class="serving-input">
-        <label class="label">Desired Serving</label>
-        <input class="input-serving" type="number" placeholder="0">
+        <label class="label">Actual Serving</label>
+        <input id="actual-serving" class="input-serving" type="number" placeholder="0">
     </div>
 </div>
 <div class="scale-factor">
@@ -55,6 +55,27 @@
         const recipeName = document.getElementById("recipe").value.trim();
         document.getElementById("target-recipe-name").textContent = recipeName ? `${recipeName}` : "";
     });
+
+    const usualServing = document.getElementById("usual-serving");
+    const actualServing = document.getElementById("actual-serving");
+    const scaleOutput = document.getElementById("scale-num");
+
+    usualServing.addEventListener("input",scaleFactor);
+    actualServing.addEventListener("input",scaleFactor);
+
+    function scaleFactor() {
+        const usual = parseFloat(usualServing.value);
+        const actual = parseFloat(actualServing.value);
+
+        if(usual>0 && actual>0) {
+            const scaleFactor = actual/usual;
+            scaleOutput.textContent = scaleFactor.toFixed(2)+"x";
+        } else {
+            scaleOutput.textContent = "0x";
+        }
+    }
+
+
 </script>
 </body>
 </html>
