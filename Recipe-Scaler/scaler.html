@@ -14,7 +14,7 @@
     <h1>RECIPE SCALER</h1>
 </div>
 <div class="content">
-    <input class="input-food" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    <input id="recipe" class="input-food" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"placeholder="Enter recipe name">
 </div>
 <div class="serving-section">
     <div class="serving-input">
@@ -45,10 +45,16 @@
 
         <div class="scaled-ingredients">
             <h2 class="scaled-recipe">Scaled Recipe</h2>
+            <h3 id="target-recipe-name"></h3>
             <p id="brief">Add ingredients and adjust servings to see scaled recipe...</p>
         </div>
     </div>
-
 </div>
+<script>
+    document.getElementById("recipe").addEventListener("input",()=>{
+        const recipeName = document.getElementById("recipe").value.trim();
+        document.getElementById("target-recipe-name").textContent = recipeName ? `${recipeName}` : "";
+    });
+</script>
 </body>
 </html>

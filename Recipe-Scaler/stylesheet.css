@@ -178,5 +178,13 @@
     background: none;
 }
 
+#target-recipe-name {
+    position: relative;
+    background: none;
+    top: 20px;
+    left: 20px;
+
+}
+
 
 
