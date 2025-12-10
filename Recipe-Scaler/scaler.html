@@ -34,8 +34,8 @@
     <div class="ingredients">
         <h2 class="ingredients-title">Ingredients</h2>
         <div class="ingredient-input">
-            <input class="input-serving" type="text" placeholder="Amount">
-            <input class="input-serving" type="text" placeholder="Unit">
+            <input id="amount" class="input-serving" type="text" placeholder="Amount">
+            <input id="unit" class="input-serving" type="text" placeholder="Unit">
             <input id="ingredient-name" class="input-serving" type="text" placeholder="Ingredient">
             <button id="remove">X</button>
         </div>
@@ -75,6 +75,26 @@
         }
     }
 
+    const amount = document.getElementById("amount");
+    const unit = document.getElementById("unit");
+    const ingredient = document.getElementById("ingredient-name");
+    const brief = document.getElementById("brief");
+
+    amount.addEventListener("input",scaledIngredient);
+    unit.addEventListener("input",scaledIngredient);
+    ingredient.addEventListener("input",scaledIngredient);
+
+    function scaledIngredient() {
+        const ingredientAmount = parseFloat(amount.value);
+        const units = parseFloat(unit.value);
+
+        let scaleValue = parseFloat(scaleOutput.textContent);
+
+        let scaledAmount = ingredientAmount * scaleValue;
+        let scaledUnits = units * scaleValue;
+
+        brief.textContent = `${ingredient.value}` +" "+ `${scaledUnits}` +" "+ `${scaledAmount}`;
+    }
 
 </script>
 </body>
