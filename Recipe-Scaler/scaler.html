@@ -104,10 +104,12 @@
         row.classList.add("ingredient-input");
 
         row.innerHTML = `
+        <div id="new-ingredient">
         <input class="input-serving" type="text" placeholder="Amount">
         <input class="input-serving" type="text" placeholder="Unit">
-        <input class="input-serving" type="text" placeholder="Ingredient">
+        <input id="ingredient-name" class="input-serving" type="text" placeholder="Ingredient">
         <button class="remove">X</button>
+        </div>
     `;
 
         const addSection = document.getElementById("new-ingredient")

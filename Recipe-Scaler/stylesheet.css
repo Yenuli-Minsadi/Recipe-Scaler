@@ -191,5 +191,14 @@
     left: 20px;
 }
 
+#new-ingredient {
+    background: white;
+    width: 560px;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*gap: 0.5rem;*/
+}
+
+
 
 
