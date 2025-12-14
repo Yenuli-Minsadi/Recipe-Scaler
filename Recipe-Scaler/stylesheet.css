@@ -128,6 +128,8 @@
     border-radius: 30px;
     text-align: center;
     background: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .remove {
@@ -139,6 +141,8 @@
     background: red;
     border: none;
     top: 2.5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 #new-ingredient {
@@ -191,13 +195,13 @@
     left: 20px;
 }
 
-#new-ingredient {
-    background: white;
-    width: 560px;
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*gap: 0.5rem;*/
-}
+/*#new-ingredient {*/
+/*    background: white;*/
+/*    width: 560px;*/
+/*    !*display: flex;*!*/
+/*    !*flex-direction: row;*!*/
+/*    !*gap: 0.5rem;*!*/
+/*}*/
 
 
 
