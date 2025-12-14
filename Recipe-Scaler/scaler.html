@@ -31,24 +31,24 @@
     <h2 id="scale-num">0x</h2>
 </div>
 <div id="ingredients-list">
-    <div class="ingredients">
+    <div id="ingredients-row" class="ingredients">
         <h2 class="ingredients-title">Ingredients</h2>
         <div class="ingredient-input">
             <input id="amount" class="input-serving" type="text" placeholder="Amount">
             <input id="unit" class="input-serving" type="text" placeholder="Unit">
             <input id="ingredient-name" class="input-serving" type="text" placeholder="Ingredient">
-            <button id="remove">X</button>
+            <button id="remove" class="remove">X</button>
         </div>
         <div id="new-ingredient">
             <button id="add-ingredient">Add Ingredient</button>
         </div>
-
         <div class="scaled-ingredients">
             <h2 class="scaled-recipe">Scaled Recipe</h2>
             <h3 id="target-recipe-name"></h3>
             <p id="brief">Add ingredients and adjust servings to see scaled recipe...</p>
         </div>
     </div>
+
 </div>
 <script>
     document.getElementById("recipe").addEventListener("input",()=>{
@@ -95,6 +95,25 @@
 
         brief.textContent = `${ingredient.value}` +" "+ `${scaledUnits}` +" "+ `${scaledAmount}`;
     }
+
+    const addButton = document.getElementById("add-ingredient");
+    const ingredients = document.getElementById("ingredients-row");
+
+    addButton.addEventListener("click",()=>{
+        const row = document.createElement("div");
+        row.classList.add("ingredient-input");
+
+        row.innerHTML = `
+        <input class="input-serving" type="text" placeholder="Amount">
+        <input class="input-serving" type="text" placeholder="Unit">
+        <input class="input-serving" type="text" placeholder="Ingredient">
+        <button class="remove">X</button>
+    `;
+
+        const addSection = document.getElementById("new-ingredient")
+        ingredients.insertBefore(row,addSection);
+    });
+
 
 </script>
 </body>

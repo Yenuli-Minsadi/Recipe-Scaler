@@ -79,10 +79,14 @@
     color: white;
 }
 
+#ingredients-list {
+    height: auto;
+}
+
 .ingredients {
     position: relative;
     width: 600px;
-    height: 400px;
+    height: auto;
     background: white;
     border-radius: 30px;
     top: 0;
@@ -90,6 +94,7 @@
     right: 0;
     bottom: 0;
     margin: auto;
+    padding-bottom: 1rem;
     margin-bottom: 100px;
 
 }
@@ -125,7 +130,7 @@
     background: white;
 }
 
-#remove {
+.remove {
     position: relative;
     width: 30px;
     height: 30px;
@@ -161,7 +166,8 @@
 
 .scaled-ingredients {
     position: relative;
-    top: 80px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     width: 560px;
     height: 200px;
     left: 20px;
@@ -183,7 +189,6 @@
     background: none;
     top: 20px;
     left: 20px;
-
 }
 
 
