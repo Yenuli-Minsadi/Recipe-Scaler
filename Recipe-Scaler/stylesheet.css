@@ -117,12 +117,30 @@
     width: 560px;
 }
 
-#ingredient-name {
-    width: 200px;
+.amount {
+    width: 150px;
+    height:35px;
+    margin-right: 10px;
+    border-radius: 30px;
+    text-align: center;
+    background: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-.input-serving {
+.unit {
     width: 150px;
+    height:35px;
+    margin-right: 10px;
+    border-radius: 30px;
+    text-align: center;
+    background: white;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.ingredient-name {
+    width: 200px;
     height:35px;
     margin-right: 10px;
     border-radius: 30px;
@@ -166,6 +184,7 @@
     left: 20px;
     width: 500px;
     background: none;
+    white-space: pre-line;
 }
 
 .scaled-ingredients {
